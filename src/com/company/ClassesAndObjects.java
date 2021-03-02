@@ -2,6 +2,16 @@ package com.company;
 
 public class ClassesAndObjects {
     public static void main(String[] args) {
+       Person person3 = new Person();
+        person3.setName("Viktor");
+        person3.setAge(14);
+        System.out.println("Мене звати " + person3.getName());
+        System.out.println("Мені " + person3.getAge());
+        int years3 = person3.calculateYearsRetirement();
+        System.out.println("Мені залишилось до пенсї " + years3);
+        person3.sayHello();
+
+        System.out.println("___________________________________");
         Person person1 = new Person();
         person1.setNameAndAge("Роман", 55);
         person1.speak();
@@ -22,8 +32,27 @@ public class ClassesAndObjects {
 }
 
 class Person {
-    String name;
-    int age;
+    private String name;
+    private int age;
+
+    public void setName(String userName) {
+        if (userName.isEmpty()) {
+            System.out.println("Ти ввів порожнє імя");
+        } else
+            name = userName;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setAge(int userAge) {
+        if (userAge < 0) {
+            System.out.println("Ти не правильно ввів свій вік");
+        } else
+            age = userAge;
+    }
+    public int getAge() {
+        return age;
+    }
 
     void setNameAndAge(String username,int userage) {
         name = username;
