@@ -5,12 +5,15 @@ public class ClassesAndObjects {
         Person person1 = new Person();
         person1.name = "Вова";
         person1.age = 80;
-        System.out.println("Мене звати " + person1.name + ", мені " + person1.age);
+        person1.speak();
+        person1.sayHello();
 
+        System.out.println("___________________________________");
         Person person2 = new Person();
         person2.name = "Роман";
         person2.age = 30;
-        System.out.println("Мене звати " + person2.name + ", мені " + person2.age);
+        person2.speak();
+        person2.sayHello();
 
     }
 }
@@ -18,4 +21,13 @@ public class ClassesAndObjects {
 class Person {
     String name;
     int age;
+    void speak() {
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Мене звати " + name + ", мені " + age);
+        }
+    }
+    void sayHello() {
+            System.out.println("Привіт всім!!!");
+        }
 }
+
