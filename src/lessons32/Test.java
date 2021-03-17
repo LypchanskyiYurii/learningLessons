@@ -10,11 +10,10 @@ public class Test {
         System.out.println("_______________");
         Animal animal1 = new Animal();
         Dog dog1 = new Dog();
-        Animal an = new Dog();
+        Animal animal2 = dog1;
 
-        dog1 = (Dog)animal1;  // can't be transform
-        dog1.eat();
-        dog1.bark();
+      Dog dog2 = (Dog)animal2;
+      dog2.bark();
         System.out.println("_______________");
     }
 }
