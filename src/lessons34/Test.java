@@ -10,17 +10,21 @@ public class Test {
         listOfAnimals.add(new Animal(2));
 
         List<Dog> listOfDog = new ArrayList<>();
-        listOfDog.add(new Dog());
-        listOfDog.add(new Dog());
+        listOfDog.add(new Dog(3));
+        listOfDog.add(new Dog(4));
 
         test(listOfAnimals);
         test(listOfDog);
+
+
 
     }
 
         private static void test(List<? extends Animal> list) {
         for (Animal animal : list) {
             animal.eat();
+            System.out.println(animal);
+
         }
 
     }
