@@ -9,6 +9,7 @@ public class Example_1 {
             public int execute() {
                 System.out.println("Hello");
                 System.out.println("Goodbye");
+
                 return 1;
             }
         });
@@ -16,7 +17,11 @@ public class Example_1 {
         runner.run(() -> {
             System.out.println("Hello");
             System.out.println("Goodbye");
+
             return 5;
         });
+
+        runner.run(() -> 3);
     }
+
 }
