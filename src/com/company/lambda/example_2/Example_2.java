@@ -1,27 +1,27 @@
-package com.company.lambda;
+package com.company.lambda.example_2;
 
-public class Example_1 {
+public class Example_2 {
     public static void main(String[] args) {
         Runner runner = new Runner();
 
         runner.run(new Executable() {
             @Override
-            public int execute() {
+            public int execute(int x, int y) {
                 System.out.println("Hello");
                 System.out.println("Goodbye");
 
-                return 1;
+                return x + y;
             }
         });
 
-        runner.run(() -> {
+        runner.run((x, y) -> {
             System.out.println("Hello");
             System.out.println("Goodbye");
 
-            return 5;
+            return y + x;
         });
 
-        runner.run(() -> 3);
+        runner.run((x, y) -> x + y);
     }
 
 }
