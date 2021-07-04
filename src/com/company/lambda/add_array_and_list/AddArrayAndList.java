@@ -27,4 +27,5 @@ public class AddArrayAndList {
             list.add(i + 1);
         }
     }
+
 }
