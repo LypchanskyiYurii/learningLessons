@@ -7,24 +7,34 @@ import java.util.stream.Collectors;
 
 public class AddArrayAndList {
     public static void main(String[] args) {
-        int[] arr = new int[10];
-        List<Integer> list = new ArrayList<>();
+        int[] arr1 = new int[10];
+        List<Integer> list1 = new ArrayList<>();
 
-        fillArr(arr);
-        fillList(list);
+        fillArr(arr1);
+        fillList(list1);
 
-        System.out.println(Arrays.toString(arr));
-        System.out.println(list);
+        // map method
+        arr1 = Arrays.stream(arr1).map(a -> a * 2).toArray();
+        list1 = list1.stream().map(a -> a * 2).collect(Collectors.toList());
 
-//        for (int i = 0; i < 10; i++) {
-//            arr[i] = arr[i] * 2;
-//            list.set(i, list.get(i) * 2);
-//        }
-        arr = Arrays.stream(arr).map(a -> a * 2).toArray();
-        list = list.stream().map(a -> a * 2).collect(Collectors.toList());
+        arr1 = Arrays.stream(arr1).map(a -> 3).toArray();
+        arr1 = Arrays.stream(arr1).map(a -> a + 1).toArray();
 
-        System.out.println(Arrays.toString(arr));
-        System.out.println(list);
+        System.out.println(Arrays.toString(arr1));
+        System.out.println(list1);
+
+        // filter method
+        int[] arr2 = new int[10];
+        List<Integer> list2 = new ArrayList<>();
+
+        fillArr(arr2);
+        fillList(list2);
+
+        arr2 = Arrays.stream(arr2).filter(a -> a % 2 == 0).toArray();
+        list2 = list2.stream().filter(a -> a % 2 == 0).collect(Collectors.toList());
+
+        System.out.println(Arrays.toString(arr2));
+        System.out.println(list2);
     }
 
     private static void fillArr(int[] arr) {
