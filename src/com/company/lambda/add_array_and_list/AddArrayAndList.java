@@ -39,6 +39,25 @@ public class AddArrayAndList {
         // forEach method
         Arrays.stream(arr2).forEach(System.out::println);
         list2.stream().forEach(System.out::println);
+
+        // reduce method
+        int[] arr3 = new int[10];
+        List<Integer> list3 = new ArrayList<>();
+
+        fillArr(arr3);
+        fillList(list3);
+
+        int sum1 = Arrays.stream(arr3).reduce((acc, b) -> acc + b).getAsInt();
+        int product = list3.stream().reduce((acc, b) -> acc * b).get();
+
+        System.out.println(sum1);
+        System.out.println(product);
+
+        int[] arr4 = new int[10];
+        fillArr(arr4);
+
+        int[] newArray = Arrays.stream(arr4).filter(a -> a % 2 != 0).map(a -> a *2).toArray();
+        System.out.println(Arrays.toString(newArray));
     }
 
     private static void fillArr(int[] arr) {
