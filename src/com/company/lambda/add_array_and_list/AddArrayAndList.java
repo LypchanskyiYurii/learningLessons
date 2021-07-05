@@ -35,6 +35,10 @@ public class AddArrayAndList {
 
         System.out.println(Arrays.toString(arr2));
         System.out.println(list2);
+
+        // forEach method
+        Arrays.stream(arr2).forEach(System.out::println);
+        list2.stream().forEach(System.out::println);
     }
 
     private static void fillArr(int[] arr) {
