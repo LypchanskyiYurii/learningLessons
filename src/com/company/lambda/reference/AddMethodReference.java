@@ -9,6 +9,9 @@ public class AddMethodReference {
             }
         };
         printer.print("Hi");
+
+        Printer lambdaPrinter = m -> System.out.println(m);
+        lambdaPrinter.print("Hi lambda");
     }
 
     interface Printer {
