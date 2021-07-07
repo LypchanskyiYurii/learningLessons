@@ -12,6 +12,9 @@ public class AddMethodReference {
 
         Printer lambdaPrinter = m -> System.out.println(m);
         lambdaPrinter.print("Hi lambda");
+
+        Printer methodReferencePrinter = System.out::println;
+        methodReferencePrinter.print("Method reference");
     }
 
     interface Printer {
