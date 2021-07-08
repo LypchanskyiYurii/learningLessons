@@ -38,10 +38,16 @@ public class AddMethodReference {
         System.out.println();
 
         names.stream().sorted(String::compareToIgnoreCase).collect(Collectors.toList()).forEach(System.out::println);
+        System.out.println("_________________________________");
+
+        printerHub.get("lambda").colorPrint("Test");
     }
 
     interface Printer {
         void print(String msg);
+        default void colorPrint(String msg) {
+            System.out.println("Default method, message: " + msg);
+        }
     }
 
 }
