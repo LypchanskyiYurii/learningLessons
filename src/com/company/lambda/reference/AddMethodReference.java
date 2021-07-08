@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class AddMethodReference {
     public static void main(String[] args) {
@@ -31,9 +32,12 @@ public class AddMethodReference {
         printerHub.get("second").print("Hello");
 
         List<String> names = Arrays.asList("John", "James", "Steve", "Andrew");
-        names.stream().forEach(n -> System.out.println(n));
+        names.stream().forEach(System.out::println);
         System.out.println("_________________________________");
-        names.stream().filter(n -> n.startsWith("J")).forEach(n -> System.out.println(n));
+        names.stream().filter(n -> n.startsWith("J")).forEach(System.out::println);
+        System.out.println();
+
+        names.stream().sorted(String::compareToIgnoreCase).collect(Collectors.toList()).forEach(System.out::println);
     }
 
     interface Printer {
