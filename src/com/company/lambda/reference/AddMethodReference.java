@@ -43,11 +43,4 @@ public class AddMethodReference {
         printerHub.get("lambda").colorPrint("Test");
     }
 
-    interface Printer {
-        void print(String msg);
-        default void colorPrint(String msg) {
-            System.out.println("Default method, message: " + msg);
-        }
-    }
-
-}
+ }
