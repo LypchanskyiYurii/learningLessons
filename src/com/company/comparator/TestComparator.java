@@ -16,5 +16,15 @@ public class TestComparator {
 
         Collections.sort(animals);
         System.out.println(animals);
+
+        List<Integer> numbers = new ArrayList<>();
+
+        numbers.add(1000);
+        numbers.add(0);
+        numbers.add(54);
+        numbers.add(101);
+
+        Collections.sort(numbers);
+        System.out.println(numbers);
     }
 }
