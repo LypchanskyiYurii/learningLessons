@@ -27,7 +27,7 @@ public class TestComparator {
         numbers.add(54);
         numbers.add(101);
 
-        Collections.sort(numbers);
+        Collections.sort(numbers, new BackwardsIntegerComparator());
         System.out.println(numbers);
     }
 
