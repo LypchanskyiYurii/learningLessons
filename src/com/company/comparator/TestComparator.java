@@ -17,5 +17,4 @@ public class TestComparator {
         Collections.sort(animals);
         System.out.println(animals);
     }
-
 }
