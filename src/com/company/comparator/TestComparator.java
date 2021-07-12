@@ -2,6 +2,7 @@ package com.company.comparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class TestComparator {
@@ -17,7 +18,13 @@ public class TestComparator {
         animals.add("Bird");
         animals.add("d");
 
-        Collections.sort(animals, new StringLengthComparator());
+        Collections.sort(animals, (o1, o2) -> {
+            if (o1.length() > o2.length())
+                return 1;
+            else if (o1.length() < o2.length())
+                return -1;
+            else return 0;
+        });
         System.out.println(animals);
 
         List<Integer> numbers = new ArrayList<>();
@@ -27,7 +34,13 @@ public class TestComparator {
         numbers.add(54);
         numbers.add(101);
 
-        Collections.sort(numbers, new BackwardsIntegerComparator());
+        Collections.sort(numbers, (o1, o2) -> {
+            if (o1 > o2)
+                return -1;
+            else if (o1 < o2)
+                return 1;
+            else return 0;
+        });
         System.out.println(numbers);
     }
 
