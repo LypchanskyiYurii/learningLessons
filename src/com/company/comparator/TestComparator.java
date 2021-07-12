@@ -9,12 +9,15 @@ public class TestComparator {
 
         List<String> animals = new ArrayList<>();
 
+        animals.add("sdlaldk");
         animals.add("Dog");
         animals.add("Frog");
         animals.add("Cat");
+        animals.add("sd");
         animals.add("Bird");
+        animals.add("d");
 
-        Collections.sort(animals);
+        Collections.sort(animals, new StringLengthComparator());
         System.out.println(animals);
 
         List<Integer> numbers = new ArrayList<>();
