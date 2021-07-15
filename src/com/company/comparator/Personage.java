@@ -1,5 +1,8 @@
 package com.company.comparator;
 
+import com.company.reflection.Author;
+
+@Author(firstName = "Yurii", dateOfCreation = 2021)
 public class Personage {
     private int id;
     private String name;
