@@ -9,7 +9,7 @@ public class Personage {
 
     @Override
     public String toString() {
-        return "Personage{" +
+        return "com.company.comparator.Personage{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
@@ -42,7 +42,7 @@ public class Personage {
     }
 
     public void sayHello() {
-        System.out.println("Personage with id: " + id + " and name" + " says hello!");
+        System.out.println("com.company.comparator.Personage with id: " + id + " and name" + " says hello!");
     }
 
 }
