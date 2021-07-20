@@ -18,7 +18,7 @@ public class SortComparable {
 
     private static void addElements(Collection collection) {
         collection.add(new Personage(3, "Tom"));
-        collection.add(new Personage(4, "Bob"));
+        collection.add(new Personage(4, "Bo"));
         collection.add(new Personage(1, "George"));
         collection.add(new Personage(2, "Katy"));
     }

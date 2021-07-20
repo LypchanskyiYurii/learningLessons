@@ -1,10 +1,8 @@
 package com.company.comparator;
 
-import com.company.reflection.Author;
 
 import java.util.Objects;
 
-@Author(firstName = "Yurii", dateOfCreation = 2021)
 public class Personage implements Comparable<Personage> {
     private int id;
     private String name;
@@ -62,9 +60,9 @@ public class Personage implements Comparable<Personage> {
 
     @Override
     public int compareTo(Personage o) {
-        if (this.id > o.getId()) {
+        if (this.name.length() > o.getName().length()) {
             return 1;
-        } else if (this.id < o.getId()) {
+        } else if (this.name.length() < o.getName().length()) {
             return -1;
         } else return 0;
     }
