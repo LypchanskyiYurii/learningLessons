@@ -2,8 +2,10 @@ package com.company.comparator;
 
 import com.company.reflection.Author;
 
+import java.util.Objects;
+
 @Author(firstName = "Yurii", dateOfCreation = 2021)
-public class Personage {
+public class Personage implements Comparable<Personage> {
     private int id;
     private String name;
 
@@ -41,8 +43,30 @@ public class Personage {
         this.name = name;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Personage)) return false;
+        Personage personage = (Personage) o;
+        return getId() == personage.getId() && getName().equals(personage.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getName());
+    }
+
     public void sayHello() {
         System.out.println("com.company.comparator.Personage with id: " + id + " and name" + " says hello!");
+    }
+
+    @Override
+    public int compareTo(Personage o) {
+        if (this.id > o.getId()) {
+            return 1;
+        } else if (this.id < o.getId()) {
+            return -1;
+        } else return 0;
     }
 
 }
