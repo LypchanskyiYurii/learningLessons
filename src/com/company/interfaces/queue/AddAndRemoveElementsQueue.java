@@ -17,6 +17,9 @@ public class AddAndRemoveElementsQueue {
 
         System.out.println(figures.remove());
         System.out.println(figures);
+        System.out.println();
 
+        System.out.println(figures.peek());
     }
+
 }
