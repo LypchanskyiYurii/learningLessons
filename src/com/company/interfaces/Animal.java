@@ -1,4 +1,4 @@
-package interfaces;
+package com.company.interfaces;
 
 public class Animal implements Info {
     public int id;

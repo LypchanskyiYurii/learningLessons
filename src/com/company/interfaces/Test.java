@@ -1,15 +1,15 @@
-package interfaces;
+package com.company.interfaces;
 
 public class Test {
     public static void main(String[] args) {
         Info info1 = new Animal(45);
-        Info info2 = new Person("Bob");
+        Info info2 = new Figure("Bob");
 
         Animal animal1 = new Animal(23);
-        Person person1 = new Person("Tom");
+        Figure figure1 = new Figure("Tom");
         animal1.sleep();
         animal1.showInfo();
-        person1.showInfo();
+        figure1.showInfo();
         System.out.println("__________________");
         outputInfo(animal1);
         info2.showInfo();
