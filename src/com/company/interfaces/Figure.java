@@ -2,7 +2,7 @@ package com.company.interfaces;
 
 import java.util.Objects;
 
-public class Figure implements Info {
+public class Figure {
     private String name;
     private int id;
 
