@@ -11,9 +11,12 @@ public class PushAndPopElementsStack {
         stack.push(2);
         stack.push(1);
 
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.pop());
+        while (!stack.empty())
+            System.out.println(stack.pop());
     }
+
 }
