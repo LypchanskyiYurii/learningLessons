@@ -26,7 +26,6 @@ public class AddAndRemoveElementsQueue {
         System.out.println(figures.offer(new Figure(7)));
         System.out.println(figures.offer(new Figure(6)));
         System.out.println(figures.offer(new Figure(8)));
-
     }
 
 }
