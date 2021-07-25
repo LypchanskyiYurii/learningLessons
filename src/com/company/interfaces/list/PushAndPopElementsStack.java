@@ -1,6 +1,7 @@
 package com.company.interfaces.list;
 
 import java.util.Stack;
+import java.util.stream.Collectors;
 
 public class PushAndPopElementsStack {
     public static void main(String[] args) {
@@ -15,8 +16,12 @@ public class PushAndPopElementsStack {
 //        System.out.println(stack.pop());
 //        System.out.println(stack.pop());
 //        System.out.println(stack.pop());
-        while (!stack.empty())
-            System.out.println(stack.pop());
+//        while (!stack.empty()) {
+//            System.out.println(stack.pop());
+//        }
+        System.out.println("________________");
+
+        stack.stream().filter(a -> a > 2).forEach(System.out::println);
     }
 
 }
