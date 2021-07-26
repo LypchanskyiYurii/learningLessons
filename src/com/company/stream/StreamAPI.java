@@ -1,6 +1,7 @@
 package com.company.stream;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class StreamAPI {
     // adding elements to the list
@@ -15,4 +16,10 @@ public class StreamAPI {
         );
     }
 
+    // looking for specialists
+    public static List<Specialist> filterBySpecialist(List<Specialist> specialists, Specialty specialty) {
+        return specialists.stream()
+                .filter(specialist -> specialist.getSpecialty().equals(specialty))
+                .collect(Collectors.toList());
+    }
 }

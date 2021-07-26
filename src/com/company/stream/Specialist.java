@@ -27,6 +27,14 @@ public class Specialist {
         this.salary = salary;
     }
 
+    public com.company.stream.Specialty getSpecialty() {
+        return Specialty;
+    }
+
+    public void setSpecialty(com.company.stream.Specialty specialty) {
+        Specialty = specialty;
+    }
+
     @Override
     public String toString() {
         return "Specialist{" +
