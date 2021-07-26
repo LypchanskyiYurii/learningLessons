@@ -30,8 +30,8 @@ public class Specialist {
     @Override
     public String toString() {
         return "Specialist{" +
-                "name='" + name + '\'' +
-                ", salary=" + salary + "specialty=" + Specialty + "}";
+                "name = '" + name + '\'' +
+                ", salary = " + salary + ", specialty = " + Specialty + "}";
     }
 
 }
