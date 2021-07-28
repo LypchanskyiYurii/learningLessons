@@ -42,5 +42,10 @@ public class StreamAPI {
     public static Specialist findWithMaxSalary(List<Specialist> specialists) {
         return specialists.stream().max(Comparator.comparing(Specialist::getSalary)).orElse(null);
     }
+
+    // search for a specialist with the min salary
+    public static Specialist findWithMinSalary(List<Specialist> specialists) {
+        return specialists.stream().min(Comparator.comparing(Specialist::getSalary)).orElse(null);
+    }
 }
 
