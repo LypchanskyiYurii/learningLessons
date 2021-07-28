@@ -10,6 +10,10 @@ public class StreamAPIDemo {
         // Filter
         List<Specialist> engineers = StreamAPI.filterBySpecialist(specialists, Specialty.ENGINEER);
         System.out.println(engineers);
+
+        // Sorting
+        List<Specialist> sortedSpecialistsAsc = StreamAPI.sortSpecialistsByNameAsc(specialists);
+        System.out.println(sortedSpecialistsAsc);
     }
 
 }

@@ -1,5 +1,7 @@
 package com.company.stream;
 
+import java.util.Objects;
+
 public class Specialist {
     private String name;
     private int salary;
@@ -42,4 +44,16 @@ public class Specialist {
                 ", salary = " + salary + ", specialty = " + Specialty + "}";
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Specialist that = (Specialist) o;
+        return salary == that.salary && Objects.equals(name, that.name) && Specialty == that.Specialty;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, salary, Specialty);
+    }
 }
