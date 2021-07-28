@@ -30,4 +30,11 @@ public class StreamAPI {
                 .sorted(Comparator.comparing(Specialist::getName))
                 .collect(Collectors.toList());
     }
+
+    // sort by name in descending order
+    public static List<Specialist> sortSpecialistsByNameDesc(List<Specialist> specialists) {
+        return specialists.stream()
+                .sorted(Comparator.comparing(Specialist::getName).reversed())
+                .collect(Collectors.toList());
+    }
 }

@@ -14,6 +14,8 @@ public class StreamAPIDemo {
         // Sorting
         List<Specialist> sortedSpecialistsAsc = StreamAPI.sortSpecialistsByNameAsc(specialists);
         System.out.println(sortedSpecialistsAsc);
+        List<Specialist> sortedSpecialistsDesc = StreamAPI.sortSpecialistsByNameDesc(specialists);
+        System.out.println(sortedSpecialistsDesc);
     }
 
 }
