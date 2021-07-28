@@ -16,6 +16,10 @@ public class StreamAPIDemo {
         System.out.println(sortedSpecialistsAsc);
         List<Specialist> sortedSpecialistsDesc = StreamAPI.sortSpecialistsByNameDesc(specialists);
         System.out.println(sortedSpecialistsDesc);
+
+        // Max and min salary
+        Specialist withMaxSalary = StreamAPI.findWithMaxSalary(specialists);
+        System.out.println(withMaxSalary);
     }
 
 }

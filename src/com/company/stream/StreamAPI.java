@@ -38,4 +38,9 @@ public class StreamAPI {
                 .collect(Collectors.toList());
     }
 
+    // search for a specialist with the maximum salary
+    public static Specialist findWithMaxSalary(List<Specialist> specialists) {
+        return specialists.stream().max(Comparator.comparing(Specialist::getSalary)).orElse(null);
+    }
 }
+
