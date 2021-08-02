@@ -20,8 +20,10 @@ public class StreamAPIDemo {
         // Max and min salary
 //        Specialist withMaxSalary = StreamAPI.findWithMaxSalary(specialists);
 //        System.out.println(withMaxSalary);
-        Specialist withMinSalary = StreamAPI.findWithMinSalary(specialists);
-        System.out.println(withMinSalary);
+//        Specialist withMinSalary = StreamAPI.findWithMinSalary(specialists);
+//        System.out.println(withMinSalary);
+
+        // Grouping by specialists of the specialty
     }
 
 }

@@ -2,6 +2,7 @@ package com.company.stream;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class StreamAPI {
@@ -47,5 +48,12 @@ public class StreamAPI {
     public static Specialist findWithMinSalary(List<Specialist> specialists) {
         return specialists.stream().min(Comparator.comparing(Specialist::getSalary)).orElse(null);
     }
+
+    // grouping by specialists of the specialty
+    public static Map<Specialty, List<Specialist>> groupBySpecialty(List<Specialist> specialists) {
+        return specialists.stream().collect(Collectors.groupingBy(Specialist::getSpecialty));
+    }
+
 }
+
 
