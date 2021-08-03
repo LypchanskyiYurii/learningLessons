@@ -25,8 +25,13 @@ public class StreamAPIDemo {
 //        System.out.println(withMinSalary);
 
         // Grouping
-        Map<Specialty, List<Specialist>> groupedBySpecialty = StreamAPI.groupBySpecialty(specialists);
-        System.out.println(groupedBySpecialty);
+//        Map<Specialty, List<Specialist>> groupedBySpecialty = StreamAPI.groupBySpecialty(specialists);
+//        System.out.println(groupedBySpecialty);
+
+        // All engineers
+        boolean allEngineers = StreamAPI.matchAllEngineers(specialists);
+        System.out.println(allEngineers);
+
     }
 
 }
