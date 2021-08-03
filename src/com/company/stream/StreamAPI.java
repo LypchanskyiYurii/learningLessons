@@ -59,6 +59,11 @@ public class StreamAPI {
         return specialists.stream().allMatch(specialist -> specialist.getSpecialty().equals(Specialty.ENGINEER));
     }
 
+    // match check whether there are engineers
+    public static boolean matchAnyEngineers(List<Specialist> specialists) {
+        return specialists.stream().anyMatch(specialist -> specialist.getSpecialty().equals(Specialty.ENGINEER));
+    }
+
 }
 
 
