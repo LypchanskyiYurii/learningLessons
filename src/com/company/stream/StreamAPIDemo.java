@@ -29,8 +29,12 @@ public class StreamAPIDemo {
 //        System.out.println(groupedBySpecialty);
 
         // All engineers
-        boolean allEngineers = StreamAPI.matchAllEngineers(specialists);
-        System.out.println(allEngineers);
+//        boolean allEngineers = StreamAPI.matchAllEngineers(specialists);
+//        System.out.println(allEngineers);
+
+        // Any engineers
+        boolean anyEngineers = StreamAPI.matchAnyEngineers(specialists);
+        System.out.println(anyEngineers);
 
     }
 
