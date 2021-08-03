@@ -54,6 +54,11 @@ public class StreamAPI {
         return specialists.stream().collect(Collectors.groupingBy(Specialist::getSpecialty));
     }
 
+    // check match matching all engineers
+    public static boolean matchAllEngineers(List<Specialist> specialists) {
+        return specialists.stream().allMatch(specialist -> specialist.getSpecialty().equals(Specialty.ENGINEER));
+    }
+
 }
 
 
