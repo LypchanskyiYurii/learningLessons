@@ -2,12 +2,13 @@ package com.company.lambda.reference;
 
 import java.util.function.IntBinaryOperator;
 import java.util.function.IntUnaryOperator;
+import java.util.function.UnaryOperator;
 
 public class MethodReferenceExamples {
     public static void main(String[] args) {
         printAbsUsingMethodReference(-23);
-        printSumUsingMethodReference(25,50);
-
+        printSumUsingMethodReference(25, 50);
+        printUpperStringUsingMethodReference("Lambda is awesome!");
     }
 
     private static void printAbsUsingMethodReference(int a) {
@@ -24,5 +25,10 @@ public class MethodReferenceExamples {
         System.out.println("\n" + a + " + " + b + " = " + result);
     }
 
+    private static void printUpperStringUsingMethodReference(String s) {
+        UnaryOperator<String> upperOperation = String::toUpperCase;
+
+        System.out.println("\n" + s + " -> " + upperOperation.apply(s));
+    }
 
 }
