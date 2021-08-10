@@ -4,10 +4,13 @@ import java.util.Optional;
 
 public class OptionalMethods {
     public static void main(String[] args) {
-        Optional<Object> empty = Optional.empty();
+        Optional<String> hello = Optional.ofNullable(null);
 
-        System.out.println(empty.isPresent());
-        System.out.println(empty.isEmpty());
+        System.out.println(hello.isPresent());
+        System.out.println(hello.isEmpty());
+
+        String orElse = hello.orElse("World");
+        System.out.println(orElse);
     }
 
 }
