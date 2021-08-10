@@ -4,12 +4,19 @@ import java.util.Optional;
 
 public class OptionalMethods {
     public static void main(String[] args) {
-        Optional<String> hello = Optional.ofNullable(null);
+        Person sergei = new Person("Serg", null);
+        String email = sergei.getEmail()
+                .map(String::toLowerCase)
+                .orElse("Serg does not have email");
 
-        System.out.println(hello.isPresent());
-        System.out.println(hello.isEmpty());
+        System.out.println(email);
 
-        hello.ifPresentOrElse(System.out::println, () -> System.out.println("world"));
+//        Optional<String> hello = Optional.ofNullable(null);
+//
+//        System.out.println(hello.isPresent());
+//        System.out.println(hello.isEmpty());
+//
+//        hello.ifPresentOrElse(System.out::println, () -> System.out.println("world"));
 
 //        String orElse = hello
 //                .map(String::toUpperCase)
