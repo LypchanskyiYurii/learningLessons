@@ -7,6 +7,7 @@ public class OptionalMethods {
         Optional<Object> empty = Optional.empty();
 
         System.out.println(empty.isPresent());
+        System.out.println(empty.isEmpty());
     }
 
 }
