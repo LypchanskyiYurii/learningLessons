@@ -9,15 +9,17 @@ public class OptionalMethods {
         System.out.println(hello.isPresent());
         System.out.println(hello.isEmpty());
 
-        String orElse = hello
-                .map(String::toUpperCase)
-                .orElseThrow(IllegalAccessError::new);
+        hello.ifPresentOrElse(System.out::println, () -> System.out.println("world"));
+
+//        String orElse = hello
+//                .map(String::toUpperCase)
+//                .orElseThrow(IllegalAccessError::new);
 //                .orElseGet(() -> {
 //                   // todo some logic
 //                   return "world";
 //                });
 //                .orElse("World");
-        System.out.println(orElse);
+//        System.out.println(orElse);
     }
 
 }
