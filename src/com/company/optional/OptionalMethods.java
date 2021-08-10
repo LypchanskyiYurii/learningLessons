@@ -11,7 +11,11 @@ public class OptionalMethods {
 
         String orElse = hello
                 .map(String::toUpperCase)
-                .orElse("World");
+                .orElseGet(() -> {
+                   // todo some logic
+                   return "world";
+                });
+//                .orElse("World");
         System.out.println(orElse);
     }
 
