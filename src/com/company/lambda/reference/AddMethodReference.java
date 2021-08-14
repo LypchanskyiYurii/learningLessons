@@ -41,6 +41,10 @@ public class AddMethodReference {
         System.out.println("_________________________________");
 
         printerHub.get("lambda").colorPrint("Test");
+
+        // Element access
+        names.stream().peek(System.out::println);
+        System.out.println(names);
     }
 
  }
