@@ -27,6 +27,9 @@ public class StreamMethod {
         //Terminal operations Stream API
         List<String> fruits = Stream.of("apple", "banana", "lemon", "orange").collect(Collectors.toList());
         System.out.println(fruits);
+
+        //Iterating over elements
+        list1.stream().forEach(System.out::println);
     }
 
 }
