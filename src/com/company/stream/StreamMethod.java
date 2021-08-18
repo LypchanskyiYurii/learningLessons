@@ -3,6 +3,7 @@ package com.company.stream;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamMethod {
     public static void main(String[] args) {
@@ -22,6 +23,10 @@ public class StreamMethod {
         // Skip the first elements
         List<Integer> skipList = list1.stream().skip(7).collect(Collectors.toList());
         System.out.println(skipList);
+
+        //Terminal operations Stream API
+        List<String> fruits = Stream.of("apple", "banana", "lemon", "orange").collect(Collectors.toList());
+        System.out.println(fruits);
     }
 
 }
