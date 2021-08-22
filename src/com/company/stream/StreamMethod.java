@@ -43,6 +43,10 @@ public class StreamMethod {
         Optional<Integer> min = streamSupplier.get().min(Comparator.naturalOrder());
         Optional<Integer> max = streamSupplier.get().max(Comparator.naturalOrder());
         System.out.println("\n" + "Min = " + min + " Max = " + max);
+
+        //Search for the first suitable element
+        Optional<Integer> firstList = list1.stream().filter(e -> e % 2 == 0).findFirst();
+        System.out.println("\n" + firstList);
     }
 
 }
