@@ -1,7 +1,10 @@
 package com.company.stream;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -34,6 +37,12 @@ public class StreamMethod {
         //Counting the number of elements
         long countList = list1.stream().count();
         System.out.println("\n" + countList);
+
+        //Minimum and maximum values
+        Supplier<Stream<Integer>> streamSupplier = () -> Stream.of(5, 3, 2, 10, 8);
+        Optional<Integer> min = streamSupplier.get().min(Comparator.naturalOrder());
+        Optional<Integer> max = streamSupplier.get().max(Comparator.naturalOrder());
+        System.out.println("\n" + "Min = " + min + " Max = " + max);
     }
 
 }
