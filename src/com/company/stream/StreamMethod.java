@@ -30,6 +30,10 @@ public class StreamMethod {
 
         //Iterating over elements
         list1.stream().forEach(System.out::println);
+
+        //Counting the number of elements
+        long countList = list1.stream().count();
+        System.out.println("\n" + countList);
     }
 
 }
