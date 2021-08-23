@@ -57,6 +57,11 @@ public class StreamMethod {
         boolean isAllPositiveNone = list1.stream()
                 .noneMatch(e -> e < 0);
         System.out.println("\n" + isAllPositiveNone);
+
+        //Correspondence of at least one element
+        boolean hasNegative = Stream.of(1, 2, 3, 4, 5)
+                .anyMatch(e -> e < 0);
+        System.out.println("\n" + hasNegative);
     }
 
 }
