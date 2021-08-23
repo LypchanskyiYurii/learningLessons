@@ -52,6 +52,11 @@ public class StreamMethod {
         boolean isAllPositive = list1.stream()
                 .allMatch(e -> e > 0);
         System.out.println("\n" + isAllPositive);
+
+        //Complete discrepancy
+        boolean isAllPositiveNone = list1.stream()
+                .noneMatch(e -> e < 0);
+        System.out.println("\n" + isAllPositiveNone);
     }
 
 }
