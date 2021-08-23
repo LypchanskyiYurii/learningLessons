@@ -47,6 +47,11 @@ public class StreamMethod {
         //Search for the first suitable element
         Optional<Integer> firstList = list1.stream().filter(e -> e % 2 == 0).findFirst();
         System.out.println("\n" + firstList);
+
+        //Correspondence of all elements
+        boolean isAllPositive = list1.stream()
+                .allMatch(e -> e > 0);
+        System.out.println("\n" + isAllPositive);
     }
 
 }
