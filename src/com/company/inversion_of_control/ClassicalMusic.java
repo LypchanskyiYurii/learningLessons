@@ -1,4 +1,4 @@
 package com.company.inversion_of_control;
 
-public class ClassicalMusic {
+public class ClassicalMusic implements Music {
 }
