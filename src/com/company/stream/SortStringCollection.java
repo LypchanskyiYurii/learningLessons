@@ -1,6 +1,7 @@
 package com.company.stream;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -17,7 +18,8 @@ public class SortStringCollection {
         list.add("Eight");
         list.add("Nine");
         list.add("Ten");
-        Stream stream = list.stream();
-        stream.filter(x-> x.toString().length() == 3).forEach(System.out::println);
+//        Stream stream = list.stream();
+//        stream.filter(x-> x.toString().length() == 3).forEach(System.out::println);
+        list.stream().sorted(Comparator.reverseOrder()).forEach(x -> System.out.println(x));
     }
 }
