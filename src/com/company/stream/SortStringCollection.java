@@ -18,5 +18,6 @@ public class SortStringCollection {
         list.add("Nine");
         list.add("Ten");
         Stream stream = list.stream();
+        stream.filter(x-> x.toString().length() == 3).forEach(System.out::println);
     }
 }
