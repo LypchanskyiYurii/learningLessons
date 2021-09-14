@@ -35,5 +35,8 @@ public class SortStringCollection {
         list2.add(9);
         list2.add(10);
 
+        List<Object> newList = new ArrayList<>();
+        Stream.of(list, list2).forEach(newList::addAll);
+        System.out.println(newList);
     }
 }
