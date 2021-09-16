@@ -16,13 +16,15 @@ public class POJO {
 
 
 
-        List<String> allUniqueMedicines = Stream.of(medicinesOnline)
+        List<String> listMedicinesOnline = Stream.of(medicinesOnline)
                 .flatMap(x ->  x.stream())
-                .distinct().sorted()
                 .collect(Collectors.toList());
-        System.out.println(allUniqueMedicines);
+        System.out.println(listMedicinesOnline);
 
-
+       List<String> pharmaciesMedicines = pharmacies.stream()
+                .flatMap(x -> x.getMedicine().parallelStream())
+                .collect(Collectors.toList());
+        System.out.println(pharmaciesMedicines);
 
 
     }
@@ -52,5 +54,11 @@ class Pharmacy {
     public void setMedicine(List<String> medicine) {
         this.medicine = medicine;
     }
-    
+
+    public static List<Pharmacy> getAll() {
+        return List.of(
+                new Pharmacy("3i", List.of("Nazonex", "Vitamin C", "Zn Supplements")),
+                new Pharmacy("DS", List.of("Vitamin C", "Advil", "Doppel Herz")),
+                new Pharmacy("Kopiiochka", List.of("Ibuprofen", "Vitamin C")));
+    }
 }
