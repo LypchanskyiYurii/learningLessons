@@ -23,6 +23,8 @@ public class POJO {
         System.out.println(allUniqueMedicines);
 
 
+
+
     }
 }
 
@@ -50,12 +52,5 @@ class Pharmacy {
     public void setMedicine(List<String> medicine) {
         this.medicine = medicine;
     }
-
-    @Override
-    public String toString() {
-        return "Pharmacy{" +
-                "name='" + name + '\'' +
-                ", medicine=" + medicine +
-                '}';
-    }
+    
 }
