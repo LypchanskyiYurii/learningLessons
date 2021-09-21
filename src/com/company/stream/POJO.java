@@ -21,7 +21,7 @@ public class POJO {
 
         collect.addAll(medicinesOnline);
 
-        collect.stream().distinct().forEach(System.out::println);
+        collect.stream().distinct().sorted().forEach(System.out::println);
 
     }
 }
