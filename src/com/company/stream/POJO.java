@@ -1,5 +1,6 @@
 package com.company.stream;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -14,18 +15,13 @@ public class POJO {
                 new Pharmacy("DS", List.of("Vitamin C", "Advil", "Doppel Herz")),
                 new Pharmacy("Kopiiochka", List.of("Ibuprofen", "Vitamin C")));
 
-
-
-        List<String> listMedicinesOnline = Stream.of(medicinesOnline)
-                .flatMap(x ->  x.stream())
+        List<String> collect = pharmacies.stream()
+                .flatMap(value -> value.getMedicine().stream()).distinct()
                 .collect(Collectors.toList());
-        System.out.println(listMedicinesOnline);
 
-       List<String> pharmaciesMedicines = pharmacies.stream()
-                .flatMap(x -> x.getMedicine().parallelStream())
-                .collect(Collectors.toList());
-        System.out.println(pharmaciesMedicines);
+        collect.addAll(medicinesOnline);
 
+        collect.stream().distinct().forEach(System.out::println);
 
     }
 }
