@@ -1,4 +1,4 @@
-package lessons45.algorithms.revers;
+package com.company.algorithms.revers;
 
 public class ArrayInverter {
 
